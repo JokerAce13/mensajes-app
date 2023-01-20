@@ -1,0 +1,17 @@
+.button-icon {
+    padding-block: 3px;
+    padding-inline: 3px;
+    text-decoration: none;
+}
+
+.button-icon img {
+    vertical-align: middle;
+}
+
+.button-icon.is-send-icon img {
+    content: url(../icons/send.svg);
+}
+
+.button-icon.is-mic-icon img {
+    content: url(../icons/mic.svg);
+}

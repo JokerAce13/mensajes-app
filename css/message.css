@@ -1,0 +1,82 @@
+.message {
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    position: relative;
+    max-inline-size: 552px;
+}
+
+.message-text {
+    margin: 0;
+}
+
+.message.is-receiver {
+    background-color: var(--white);
+    align-self: flex-start;
+    border-radius: 0 .5rem .5rem .5rem;
+}
+
+.message.is-receiver::before {
+    content: '';
+    /* Alinear un elemento al lado izq del padre */
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-end: 100%;
+    /* Crear un triangulo */
+    inline-size: 12px;
+    block-size: 12px;
+    box-sizing: border-box;
+    border-inline-start: 6px solid transparent;
+    border-inline-end: 6px solid var(--white);
+    border-block-start: 6px solid var(--white);
+    border-block-end: 6px solid transparent
+}
+
+.message.is-sender {
+    background-color: var(--green-1);
+    align-self: flex-end;
+    border-radius: .5rem 0 .5rem .5rem
+}
+
+.message.is-sender::before {
+    content: '';
+    /* Alinear un elemento al lado izq del padre */
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 100%;
+    /* Crear un triangulo */
+    inline-size: 12px;
+    block-size: 12px;
+    box-sizing: border-box;
+    border-inline-start: 6px solid var(--green-1);
+    border-inline-end: 6px solid transparent;
+    border-block-start: 6px solid var(--green-1);
+    border-block-end: 6px solid transparent;
+}
+
+.message-details {
+    display: flex;
+    justify-content: flex-end;
+    gap: .25rem
+}
+
+.message-date {
+    font: var(--caption-12regular);
+    color: var(--grey);
+}
+
+.message-status {
+    inline-size: 1rem;
+    block-size: 1rem;
+}
+
+.message-status.is-doubleCheck {
+    background-image: url(../images/double-check.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.message-body p  a {
+    color: var(--blue-2);
+}

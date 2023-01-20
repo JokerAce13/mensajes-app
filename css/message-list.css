@@ -1,0 +1,23 @@
+@import '../css/message.css';
+@import '../css/date.css';
+
+.chat-messages {
+    flex: 1;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1.5rem;
+    padding: 1rem;
+    position: relative;
+}
+
+.chat-messages::before {
+    content: '';
+    position: absolute;
+    background-image: url(../images/bg2.jpg);
+    background-size: auto;
+    inset-block: 0px;
+    inset-inline: 0px;
+    opacity: 0.3;
+    z-index: -1;
+    filter: contrast(70%);
+}

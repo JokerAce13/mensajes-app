@@ -1,0 +1,50 @@
+@import '../css/button-icon.css';
+@import '../css/header.css';
+@import '../css/chat.css';
+@import '../css/contact-directory.css';
+@import '../css/profile.css';
+@import '../css/search-messages.css';
+@import '../css/layout.css';
+
+
+:root {
+  --black: #000000;
+  --grey: #666667;
+  --grey-rgba: rgba(102, 102, 103, 0.5);
+  --grey-2: #f2f2f2;
+  --grey-3: #f6f6f6;
+  --grey-4: #ededed;
+  --white: #ffffff;
+  --green-1: #e1f7cb;
+  --green-2: #56bca6;
+  --red: #ff4a4a;
+  --green-3: #429488;
+  --blue: #5cb3f0;
+  --blue-2: #316AFB;
+  --lightblue: #E5F2FA;
+  --fontBase: 'Inter', sans-serif;
+  --body-22bold: 700 1.375rem/1.5rem var(--fontBase);
+  --body-16regular: 400 1rem/1.25rem var(--fontBase);
+  --body-16bold: 700 1rem/1.25rem var(--fontBase);
+  --body-14regular: 400 0.875rem/1.125rem var(--fontBase);
+  --body-14regular_u: 500 0.875rem/1.25rem var(--fontBase);
+  --caption-12bold: 700 0.75rem/1rem var(--fontBase);
+  --caption-12regular: 400 0.75rem/1rem var(--fontBase);
+  --caption-12regular_u: 400 0.75rem/1.25rem var(--fontBase);
+  --headerSize: 80px;
+  --actionsSize: 80px;
+  font-size: 16px; /* Medida base de la fuente y no basarse en el user-agent */
+}
+
+body {
+  font: var(--body-16regular);
+  margin: 0;
+}
+
+.hideElement {
+  display: none;
+}
+
+.showElement {
+  display: flex;
+}

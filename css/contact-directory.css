@@ -1,0 +1,25 @@
+@import '../css/search-bar.css';
+@import '../css/contact.css';
+@import '../css/contact-list.css';
+
+.contact-directory {
+    inline-size: 30%;
+    background-color: var(--grey-3);
+    display: flex;
+    flex-direction: column;
+}
+
+.directory-title {
+    background-color: var(--white);
+    padding: 1rem;
+}
+
+.directory-title h2{
+    margin: 0;
+    font: var(--body-22bold);
+}
+
+.contact-search {
+    background-color: var(--grey-3);
+    display: flex;
+}

@@ -1,0 +1,19 @@
+.chat-actions {
+    block-size: var(--actionsSize);
+    background-color: var(--grey-4);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-inline: 1rem;
+}
+
+.chat-input {
+    padding-block: 1rem;
+    padding-inline: 1.5rem;
+    flex: 1;
+    margin: 0;
+    font: var(--body-16regular);
+    margin-inline: .5rem;
+    border: none;
+    border-radius: 3.125rem;
+}

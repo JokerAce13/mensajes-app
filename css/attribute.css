@@ -1,0 +1,20 @@
+.profile-attribute {
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1.5rem
+}
+
+.attribute-name {
+    color: var(--green-3);
+}
+
+.attribute-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.attribute-details img {
+    opacity: 0.5;
+}

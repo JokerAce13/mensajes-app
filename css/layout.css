@@ -1,0 +1,44 @@
+.main {
+    display: flex;
+}
+
+.chat {
+    display: flex;
+}
+
+#returnIcon, #directory-title {
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .chat {
+        inline-size: 100%;
+        display: none;
+    }
+
+    #returnIcon, #directory-title {
+        display: block;
+    }
+
+    .contact-directory {
+        inline-size: 100%;
+    }
+
+    .profile {
+        inline-size: 100%;
+    }
+
+    .search-messages {
+        inline-size: 100%;
+    }
+
+    #btn-emoji, #btn-attachment {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .chat {
+        display: none;
+    }
+}

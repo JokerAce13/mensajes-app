@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/index.css">
+  <title>MensajesApp</title>
+  <!--Inicio - Configuración Favicon - Favicon Generation -->
+  <link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="./favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="./favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="./favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="./favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="./favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="./favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+  <link rel="manifest" href="./favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <!--Fin - Configuración Favicon - Favicon Generation -->
+</head>
+
+<body>
+  <div class="main">
+
+    <section id="profile" class="profile hideElement">
+      <header class="header is-green">
+        <div class="header-profile">
+          <div class="actions-profile">
+            <a class="button-icon" onclick="hideProfile(), toggleElement('profile', 'contact-directory')"><img
+                src="icons/arrow-left-white.svg" width="24" height="24" alt="Icono de busqueda"></a>
+            <span class="profile-title">Perfil</span>
+          </div>
+        </div>
+      </header>
+      <div class="profile-img">
+        <img src="images/change-img.png" width="200" height="200" alt="Icono de cambio de imagen">
+      </div>
+      <section class="profile-attributes-list">
+
+        <article class="profile-attribute">
+          <span class="attribute-name">Tu Nombre</span>
+          <div class="attribute-details">
+            <span class="attribute-value">Chris</span>
+            <a class="button-icon"><img src="icons/edit-2.svg" width="24" height="24" alt="Icono de Edición"></a>
+          </div>
+        </article>
+
+      </section>
+    </section>
+
+    <section id="contact-directory" class="contact-directory">
+      <header class="header">
+        <div class="header-primary">
+          <div class="user">
+            <img src="images/user.png" width="48" height="48" alt="Imagen del usuario"
+              onclick="showProfile(), toggleElement('contact-directory','profile')">
+          </div>
+        </div>
+      </header>
+      <div id="directory-title" class="directory-title">
+        <h2>Todos los chats</h2>
+      </div>
+      <div class="contact-search">
+        <input id="search-input" class="search-bar" type="text" placeholder="Buscar o iniciar un nuevo chat"
+          oninput="hideSearchContactIcon()">
+        <img class="input-icon" src="icons/search.svg" width="24" height="24" alt="Icono de busqueda">
+        <img id="cancel-icon" class="input-icon is-right" src="icons/x.svg" width="24" height="24" alt="Icono de Cerrar"
+          onclick="clearSearchContactInput()">
+      </div>
+      <section class="contact-list">
+
+        <article class="contact" onclick="selectContact(this), toggleElement('contact-directory','chat')">
+          <img src="images/ingrid.png" width="48" height="48" alt="Imagen del usuario">
+          <div class="contact-message">
+            <div class="contact-message-header">
+              <span class="contact-name">Ingrid</span>
+              <span class="contact-message-date">Viernes</span>
+            </div>
+            <div class="contact-message-details">
+              <span class="contact-message-status is-inactive-doubleCheck"></span>
+              <p class="contact-message-text">Amet minim mollit non deserunt ullamco est sit aliqua...</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="contact is-active" onclick="selectContact(this), toggleElement('contact-directory','chat')">
+          <img src="images/josefa.png" width="48" height="48" alt="Imagen del usuario">
+          <div class="contact-message">
+            <div class="contact-message-header">
+              <span class="contact-name">Josefa</span>
+              <span class="contact-message-date">Viernes</span>
+            </div>
+            <div class="contact-message-details">
+              <span class="contact-message-status is-doubleCheck"></span>
+              <p class="contact-message-text">Amet minim mollit non deserunt ullamco est sit aliqua...</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="contact" onclick="selectContact(this), toggleElement('contact-directory','chat')">
+          <img src="images/jan.png" width="48" height="48" alt="Imagen del usuario">
+          <div class="contact-message">
+            <div class="contact-message-header">
+              <span class="contact-name">Jan</span>
+              <span class="contact-message-date">Viernes</span>
+            </div>
+            <div class="contact-message-details">
+              <span class="contact-message-status is-inactive-doubleCheck"></span>
+              <p class="contact-message-text">Amet minim mollit non deserunt ullamco est sit aliqua...</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="contact" onclick="selectContact(this), toggleElement('contact-directory','chat')">
+          <img src="images/ruben.png" width="48" height="48" alt="Imagen del usuario">
+          <div class="contact-message">
+            <div class="contact-message-header">
+              <span class="contact-name">Ruben</span>
+              <span class="contact-message-date">Viernes</span>
+            </div>
+            <div class="contact-message-details">
+              <span class="contact-message-status is-inactive-doubleCheck"></span>
+              <p class="contact-message-text">Amet minim mollit non deserunt ullamco est sit aliqua...</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="contact" onclick="selectContact(this), toggleElement('contact-directory','chat')">
+          <img src="images/dionisio.png" width="48" height="48" alt="Imagen del usuario">
+          <div class="contact-message">
+            <div class="contact-message-header">
+              <span class="contact-name">Dionisio</span>
+              <span class="contact-message-date">Viernes</span>
+            </div>
+            <div class="contact-message-details">
+              <span class="contact-message-status is-inactive-doubleCheck"></span>
+              <p class="contact-message-text">Amet minim mollit non deserunt ullamco est sit aliqua...</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="contact" onclick="selectContact(this), toggleElement('contact-directory','chat')">
+          <img src="images/rufino.png" width="48" height="48" alt="Imagen del usuario">
+          <div class="contact-message">
+            <div class="contact-message-header">
+              <span class="contact-name">Rufino</span>
+              <span class="contact-message-date">Viernes</span>
+            </div>
+            <div class="contact-message-details">
+              <span class="contact-message-status is-inactive-doubleCheck"></span>
+              <p class="contact-message-text">Amet minim mollit non deserunt ullamco est sit aliqua...</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="contact" onclick="selectContact(this), toggleElement('contact-directory','chat')">
+          <img src="images/mariano.png" width="48" height="48" alt="Imagen del usuario">
+          <div class="contact-message">
+            <div class="contact-message-header">
+              <span class="contact-name">Mariano</span>
+              <span class="contact-message-date">Viernes</span>
+            </div>
+            <div class="contact-message-details">
+              <span class="contact-message-status is-inactive-doubleCheck"></span>
+              <p class="contact-message-text">Amet minim mollit non deserunt ullamco est sit aliqua...</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="contact" onclick="selectContact(this), toggleElement('contact-directory','chat')">
+          <img src="images/pilar.png" width="48" height="48" alt="Imagen del usuario">
+          <div class="contact-message">
+            <div class="contact-message-header">
+              <span class="contact-name">Pilar</span>
+              <span class="contact-message-date">Viernes</span>
+            </div>
+            <div class="contact-message-details">
+              <span class="contact-message-status is-inactive-doubleCheck"></span>
+              <p class="contact-message-text">Amet minim mollit non deserunt ullamco est sit aliqua...</p>
+            </div>
+          </div>
+        </article>
+
+      </section>
+    </section>
+
+    <section id="chat" class="chat">
+      <header class="header">
+        <div class="header-primary">
+          <div class="user">
+            <a id="returnIcon" class="button-icon" onclick="toggleElement('chat','contact-directory')"><img
+                src="icons/arrow-left.svg" width="24" height="24" alt="Icono de busqueda"></a>
+            <img id="user-image" src="images/josefa.png" width="48" height="48" alt="Imagen del usuario">
+            <p>
+              <span id="user-name" class="user-name">Josefa</span>
+              <span class="user-status">En Linea</span>
+            </p>
+          </div>
+        </div>
+        <div class="header-secondary">
+          <a class="button-icon" onclick="showSearchMessage(), toggleElement('chat','search-messages')"><img
+              src="icons/search.svg" width="24" height="24" alt="Icono de busqueda"></a>
+        </div>
+      </header>
+      <div class="chat-messages">
+        <div class="message is-receiver">
+          <div class="message-body">
+            <p class="message-text">Ok gracias perdón por la tardanza pero yá quedó</p>
+          </div>
+          <div class="message-details">
+            <span class="message-date">09:29 am</span>
+          </div>
+        </div>
+        <div class="message is-sender">
+          <div class="message-body">
+            <p class="message-text">Claro. Sin problemas</p>
+          </div>
+          <div class="message-details">
+            <span class="message-date">09:28 am</span>
+            <span class="message-status is-doubleCheck"></span>
+          </div>
+        </div>
+        <div class="message is-receiver">
+          <div class="message-body">
+            <p class="message-text">Buenos días disculpe yá está tu cuenta abierta pero para mañana de 9 A 12 podrás
+              recibir al técnico</p>
+          </div>
+          <div class="message-details">
+            <span class="message-date">09:27 am</span>
+          </div>
+        </div>
+        <div class="date">Viernes</div>
+        <div class="message is-sender">
+          <div class="message-body">
+            <p class="message-text">Claro: <a
+                href="">https://www.google.com/maps?q=31.9996555,-116.5759683&hl=es-MX&gl=mx&entry=gps&lucs=swa&shorturl=1</a>
+            </p>
+          </div>
+          <div class="message-details">
+            <span class="message-date">09:28 am</span>
+            <span class="message-status is-doubleCheck"></span>
+          </div>
+        </div>
+        <div class="message is-receiver">
+          <div class="message-body">
+            <p class="message-text">Me puedes mandar la ubicación de su casa</p>
+          </div>
+          <div class="message-details">
+            <span class="message-date">09:27 am</span>
+          </div>
+        </div>
+        <div class="date">Jueves</div>
+      </div>
+      <div class="chat-actions">
+        <a id="btn-emoji" class="button-icon"><img src="icons/smile.svg" width="24" height="24"
+            alt="Icono de busqueda"></a>
+        <a id="btn-attachment" class="button-icon"><img src="icons/paperclip.svg" width="24" height="24"
+            alt="Icono de busqueda"></a>
+        <input class="chat-input" id="chat-input" type="text" placeholder="Escribe un mensaje" oninput="changeIcon()">
+        <a id="btn-mic-or-send" class="button-icon is-mic-icon"><img src="icons/mic.svg" width="24" height="24"
+            alt="Icono de busqueda"></a>
+      </div>
+    </section>
+
+    <section id="search-messages" class="search-messages hideElement">
+
+      <header class="header">
+        <div class="header-primary">
+          <div class="actions-search-messages">
+            <a class="button-icon" onclick="hideSearchMessage(), toggleElement('search-messages','chat')"><img
+                src="icons/x.svg" width="24" height="24" alt="Icono de busqueda"></a>
+            <span class="search-messages-title">Mensajes con Josefa</span>
+          </div>
+        </div>
+      </header>
+
+      <div class="contact-search">
+        <input id="search-message-input" class="search-bar" type="text" placeholder="Buscar mensaje"
+          oninput="hideSearchMessageIcon()">
+        <img class="input-icon" src="icons/search.svg" width="24" height="24" alt="Icono de busqueda">
+        <img id="cancel-message-icon" class="input-icon is-right" src="icons/x.svg" width="24" height="24"
+          alt="Icono de Cerrar" onclick="clearSearchMessageInput()">
+      </div>
+
+      <section id="search-messages-list" class="search-messages-list hideElement">
+        <article class="message-found">
+          <span class="message-found-date">Viernes</span>
+          <div class="message-found-details">
+            <span class="message-found-status is-doubleCheck"></span>
+            <p class="message-found-text">Claro: <a
+                href="">https://www.google.com/maps?q=31.9996555,-116.5759683&hl=es-MX&gl=mx&entry=gps&lucs=swa&shorturl=1</a>
+            </p>
+          </div>
+        </article>
+
+        <article class="message-found">
+          <span class="message-found-date">05/01/2022</span>
+          <div class="message-found-details">
+            <span class="message-found-status is-inactive-doubleCheck"></span>
+            <p class="message-found-text">Claro podemos verlo</a></p>
+          </div>
+        </article>
+      </section>
+
+    </section>
+  </div>
+
+</body>
+<script src="./js/index.js"></script>
+
+</html>

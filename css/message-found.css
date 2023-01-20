@@ -1,0 +1,45 @@
+.message-found {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    background-color: var(--white);
+    border: 1px solid var(--grey-4);
+}
+
+.message-found-text {
+    margin: 0;
+    flex: 1;
+    word-break: break-all;
+}
+
+.message-found-details {
+    display: flex;
+    gap: .5rem;
+}
+
+.message-found-date {
+    font: var(--caption-12regular);
+    color: var(--grey);
+}
+
+.message-found-status {
+    inline-size: 1rem;
+    block-size: 1rem;
+}
+
+.message-found-status.is-doubleCheck {
+    background-image: url(../images/double-check.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.message-found-status.is-inactive-doubleCheck {
+    background-image: url(../images/double-check-inactive.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.message-found-details p a {
+    color: var(--blue-2);
+}

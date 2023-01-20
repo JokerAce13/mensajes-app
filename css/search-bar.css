@@ -1,0 +1,27 @@
+.contact-search {
+    position: relative;
+}
+
+.search-bar {
+    padding-block: 1rem;
+    padding-inline-end: 1.5rem;
+    padding-inline-start: 5rem;
+    margin: 0;
+    font: var(--body-16regular);
+    margin-inline: 1rem;
+    margin-block: 1rem;
+    border: none;
+    border-radius: 3.125rem;
+    flex: 1;
+}
+
+.input-icon {
+    position: absolute;
+    inset-inline-start: 32px;
+    inset-block-start: 50%;
+    transform: translateY(-50%);
+}
+
+.input-icon.is-right {
+    inset-inline-start: calc(100% - 60px);
+}

@@ -1,0 +1,68 @@
+.contact {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: 1rem;
+    border: 1px solid var(--grey-4);
+}
+
+.contact.is-active {
+    background-color: var(--grey-2);
+}
+
+.contact.is-inactive {
+    background-color: var(--white);
+}
+
+.contact img {
+    border-radius: 50%;
+}
+
+.contact-message-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-message-details {
+    display: flex;
+    gap: .25rem
+}
+
+.contact-message-details p {
+    margin: 0;
+}
+
+.contact p span {
+    display: block;
+}
+
+.contact-name {
+    font: var(--body-16regular);
+    color: var(--black);
+}
+
+.contact-message {
+    font: var(--caption-12regular);
+    color: var(--grey);
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    flex: 1;
+}
+
+.contact-message-status {
+    inline-size: 1rem;
+    block-size: 1rem;
+}
+
+.contact-message-status.is-inactive-doubleCheck {
+    background-image: url(../images/double-check-inactive.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.contact-message-status.is-doubleCheck {
+    background-image: url(../images/double-check.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}

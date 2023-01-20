@@ -1,0 +1,26 @@
+@import '../css/user.css';
+
+.header {
+    block-size: var(--headerSize);
+    padding: 1rem;
+    background-color: var(--grey-4);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-inline-end: 1px solid var(--grey-rgba);
+}
+
+.header-primary, .header-secondary {
+    display: flex;
+}
+
+.header-profile {
+    display: flex;
+    block-size: var(--headerSize);
+    align-items: flex-end;
+}
+
+.header.is-green {
+    background-color: var(--green-2);
+    align-items: flex-end;
+}
